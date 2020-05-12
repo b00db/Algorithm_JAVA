@@ -28,7 +28,8 @@ public class _1427 {
 		}
 		
 		// selectionSort(array);
-		bubbleSort(array);
+		// bubbleSort(array);
+		insertionSort(array);
 		
 		for(int i=0; i<N.length(); i++) {
 			System.out.print(array[i]);
@@ -66,6 +67,18 @@ public class _1427 {
 					A[j] = temp;
 				}
 			}
+		}
+	}
+	
+	// »ðÀÔ Á¤·Ä(Insertion Sort)
+	static void insertionSort(int A[]) {
+		int x, j;
+		for(int i=1; i<A.length; i++) {
+			x = A[i];
+			for(j=i-1; j>=0 && A[j]<x; j--) {
+				A[j+1] = A[j];
+			}
+			A[j+1] = x;
 		}
 	}
 }
