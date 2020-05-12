@@ -27,7 +27,8 @@ public class _1427 {
 			array[i] = Character.getNumericValue(N.charAt(i));
 		}
 		
-		selectionSort(array);
+		// selectionSort(array);
+		bubbleSort(array);
 		
 		for(int i=0; i<N.length(); i++) {
 			System.out.print(array[i]);
@@ -52,6 +53,19 @@ public class _1427 {
 			temp = A[max];
 			A[max] = A[i];
 			A[i] = temp;
+		}
+	}
+	
+	// 버블 정렬(Bubble Sort)
+	static void bubbleSort(int A[]) {
+		for(int i=0; i<A.length; i++) {
+			for(int j=0; j<A.length-i-1; j++) {
+				if(A[j] < A[j+1]) {
+					int temp = A[j+1];
+					A[j+1] = A[j];
+					A[j] = temp;
+				}
+			}
 		}
 	}
 }
